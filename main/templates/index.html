@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block header %}
+{% if g.user %}
+  <h1>{% block title %}Requests{% endblock %}</h1>
+{% endif %}
+{% endblock %}
+{% block content %}
+{% if g.user %}
+  <table>
+    <thead>
+      <tr><th>Request ID</th><th>Assignment Link</th><th>Document Link</th><th>Time</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+    {% for request in userRequests %}
+      <tr>
+      {% for item in request[:5] %}
+        <td>{{item}}</td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <br/>
+  <form method="post" class="buttonForm">
+    <input type="submit" name="addRequest" value="Create Request">
+  </form>
+{% endif %}
+{% endblock %}

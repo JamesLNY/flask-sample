@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Make a Request{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label>Assignment Link:</label><br/>
+    <input type="text" name="assignmentLink"><br/>
+    <label>Document Link:</label><br/>
+    <input type="text" name="documentLink"><br/>
+    <input type="submit" name="submitRequest">
+  </form>
+{% endblock %}
