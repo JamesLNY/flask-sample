@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block header %}
+{% if g.user %}
+  <h1>{% block title %}Editor Application{% endblock %}</h1>
+{% endif %}
+{% endblock %}
+{% block content %}
+{% if g.user %}
+  <form method="post">
+    <label>Password:</label><br/>
+    <input type="text" name="password"><br/>
+    <input type="submit" name="submitApplication">
+  </form>
+{% endif %}
+{% endblock %}

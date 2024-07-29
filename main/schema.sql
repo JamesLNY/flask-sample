@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS requests;
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT UNIQUE NOT NULL,
+  editor Boolean,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE requests (
+  requestID INTEGER PRIMARY KEY AUTOINCREMENT,
+  assignmentLink TEXT NOT NULL,
+  documentLink TEXT NOT NULL,
+  time TEXT NOT NULL,
+  status TEXT NOT NULL,
+  id INTEGER NOT NULL,
+  editorID INTEGER
+)

@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  margin-bottom: 2vh;
+}
+p {
+  margin: 1vh 1vw;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  background-color: lightgray;
+  opacity: 70%;
+}
+h1 {
+  text-align: center;
+  margin: 2vh 0;
+}
+header {
+  background-color: lightblue;
+  overflow: hidden;
+}
+header > * {
+  float: left;
+  padding: 1vh 1vw
+}
+header section p {
+  margin: 0;
+}
+header section:hover > section {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: azure;
+}
+header section section {
+  display: none;
+  position: absolute;
+  margin: 1vh 0 0 -1vw;
+}
+header section section > * {
+  padding: 0.5vh 0.5vw;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: rgba(188, 255, 233, 0.719);
+  border-radius: 20px;
+  width: 95vw;
+  table-layout: fixed;
+}
+th {
+  padding: 1vh 1vw;
+}
+td {
+  text-align: center;
+}
+form {
+  margin: auto auto;
+  background-color: lightgray;
+  border: 10px solid lightgray;
+  border-radius: 10px;
+  width: fit-content;
+}
+input {
+  padding: 5px;
+  margin: 10px 0;
+}
+input[type="submit"] {
+  width: 100%;
+  min-width: 10vw;
+}
+.flash {
+  margin: auto auto;
+  width: fit-content;
+  color: red;
+}
+.buttonForm {
+  visibility: hidden;
+  border: none;
+}
+.buttonForm input {
+  visibility: visible;
+  margin: 5px;
+}
