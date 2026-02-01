@@ -1,6 +1,6 @@
 import os
 import datetime
-from flask import Flask, request, session, render_template
+from flask import Flask, request, session, render_template, flash
 from main.db import getDB
 
 app = Flask(__name__, instance_relative_config=True)
